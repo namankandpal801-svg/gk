@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Appointments</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="patients.html">Patients</a>
+            <a href="add_patient.html">Add Patient</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Appointment List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient Name</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentTable">
+                <tr>
+                    <td>201</td>
+                    <td>Rahul Sharma</td>
+                    <td>Dr. A. Singh</td>
+                    <td>2025-10-15</td>
+                    <td>10:00 AM</td>
+                    <td>
+                        <button class="view-btn">View</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>Priya Verma</td>
+                    <td>Dr. S. Mehta</td>
+                    <td>2025-10-15</td>
+                    <td>11:30 AM</td>
+                    <td>
+                        <button class="view-btn">View</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add Appointment Form -->
+        <h2 style="margin-top: 40px;">Add New Appointment</h2>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="ap-patient">Patient Name:</label>
+                <input type="text" id="ap-patient" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ap-doctor">Doctor:</label>
+                <input type="text" id="ap-doctor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ap-date">Date:</label>
+                <input type="date" id="ap-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ap-time">Time:</label>
+                <input type="time" id="ap-time" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Appointment</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

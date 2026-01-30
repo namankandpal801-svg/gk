@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Hospital Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="images/hospital-logo.png" alt="Logo" class="sidebar-logo">
+    <h2>Hospital System</h2>
+    <ul>
+      <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
+      <li><a href="patients.html">👨‍⚕️ Patients</a></li>
+      <li><a href="add_patient.html">➕ Add Patient</a></li>
+      <li><a href="appointments.html">📅 Appointments</a></li>
+      <li><a href="#" id="logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="top-bar">
+      <h1>Welcome to the Dashboard</h1>
+       <h2 id="welcome-msg"></h2> <!-- Add this here -->
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+      <div class="card">
+        <h3>Total Patients</h3>
+        <p>125</p>
+      </div>
+      <div class="card">
+        <h3>Appointments Today</h3>
+        <p>34</p>
+      </div>
+      <div class="card">
+        <h3>Doctors on Duty</h3>
+        <p>12</p>
+      </div>
+      <div class="card">
+        <h3>Messages</h3>
+        <p>5 New</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

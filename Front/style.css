@@ -1,0 +1,341 @@
+/* Simple styling for the login page */
+
+/* Set a full-page background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* You may need to update the path for the background image if it doesn't exist */
+    /* background-image: url('../images/hospital-bg.jpg'); */ 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Center the login box */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
+}
+
+/* Login box styling */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Headline */
+h2 {
+    margin-bottom: 20px;
+    color: #0a4b78;
+}
+
+/* Input fields and dropdown */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+/* Login Button */
+.login-box button, .submit-btn {
+    width: 100%;
+    background-color: #0a4b78;
+    color: white;
+    padding: 12px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover, .submit-btn:hover {
+    background-color: #0077b6;
+}
+
+#error-msg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ===== Dashboard and General Layout ===== */
+/* Side Bar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0077b6; /* Blue */
+    color: white;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.sidebar li a:hover, .sidebar li a.active {
+    background-color: #023e8a; /* Darker blue on hover/active */
+}
+
+.sidebar-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f4f7f6; /* Light gray background */
+    min-height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-bar h1 {
+    color: #0a4b78;
+    font-size: 2em;
+}
+
+/* Dashboard Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #0077b6;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0a4b78;
+    margin: 10px 0 0;
+}
+
+/* General Form Section for Add Patient/Details Pages */
+.form-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0a4b78;
+}
+
+/* Nav on Patient/Appointments Pages */
+header {
+    background-color: #0a4b78;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #0077b6;
+}
+
+/* ===== Patients and Appointments Table Styles (Shared) ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #90e0ef;
+    color: #023e8a;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button.view-btn {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.delete-btn {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button.view-btn:hover {
+    background-color: #023e8a;
+}
+
+button.delete-btn:hover {
+    background-color: #9d0208;
+}
+
+/* --- New Styles for patient_details.html --- */
+
+/* Patient Info Container (Details) */
+.patient-info {
+    background-color: #e0f7fa; /* Light cyan background */
+    border: 1px solid #b2ebf2;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.patient-info p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #004d40;
+}
+
+.patient-info strong {
+    font-weight: 600;
+    color: #00838f; /* Teal color for labels */
+    display: inline-block;
+    min-width: 120px;
+}
+
+/* Medical Record Form Styling */
+.medical-record-form-section h2 {
+    color: #023e8a;
+}
+
+/* Ensure form groups maintain spacing */
+.medical-record-form-section .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.medical-record-form-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0077b6;
+}
+
+.medical-record-form-section input[type="date"],
+.medical-record-form-section input[type="text"],
+.medical-record-form-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make inputs full width of their container */
+    box-sizing: border-box;
+}
+
+/* Specific button styling for the new form (using the existing submit-btn class) */
+.medical-record-form-section .submit-btn {
+    background-color: #00b4d8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.medical-record-form-section .submit-btn:hover {
+    background-color: #0077b6;
+}
